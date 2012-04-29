@@ -34,15 +34,15 @@
 
       <div id="nav">
         
-        <div><a <%= if ($thisSection == "home")   {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/index.php?section=home">HOME</a></div>
-        <div><a <%= if ($thisSection == "pointofsale")   {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/index.php?section=pointofsale">POINT OF SALE</a></div>
-        <div><a <%= if ($thisSection == "posters") {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/index.php?section=posters">POSTERS</a></div>
-        <div><a <%= if ($thisSection == "displaypanels") {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/index.php?section=displaypanels">DISPLAY PANELS</a></div>
-        <div><a <%= if ($thisSection == "windowgraphics") {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/index.php?section=windowgraphics">WINDOW GRAPHICS</a></div>
-        <div><a <%= if ($thisSection == "bannersflags") {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/">BANNERS / FLAGS</a></div>
-        <div><a <%= if ($thisSection == "exhibitions") {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/">EXHIBITIONS &amp; SETS</a></div>
-        <div><a <%= if ($thisSection == "digitalprint") {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/">DIGITAL PRINT</a></div>
-        <div><a <%= if ($thisSection == "designservice") {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/">DESIGN SERVICE</a></div>
+        <div><a <%= side_nav_class @path %> href="/">HOME</a></div>
+        <div><a <%= side_nav_class @path %> href="/pointofsale">POINT OF SALE</a></div>
+        <div><a <%= side_nav_class @path %> href="/posters">POSTERS</a></div>
+        <div><a <%= side_nav_class @path %> href="/displaypanels">DISPLAY PANELS</a></div>
+        <div><a <%= side_nav_class @path %> href="/windowgraphics">WINDOW GRAPHICS</a></div>
+        <div><a <%= side_nav_class @path %> href="/">BANNERS / FLAGS</a></div>
+        <div><a <%= side_nav_class @path %> href="/">EXHIBITIONS &amp; SETS</a></div>
+        <div><a <%= side_nav_class @path %> href="/">DIGITAL PRINT</a></div>
+        <div><a <%= side_nav_class @path %> href="/">DESIGN SERVICE</a></div>
       </div>
       
       <div id="content"><%= yield %></div>

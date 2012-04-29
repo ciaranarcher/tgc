@@ -19,14 +19,12 @@ class TGC < Sinatra::Base
     def side_nav_class(path)
       selected, unselected = 'class="selectedLink"', 'class="navLink"'
       case path
-      when 'about', 'contact', 'upload', 'quote'
+      when 'home', 'pointofsale', 'posters', 'displaypanels', 'windowgraphics', 'bannersflags', 'exhibitions', 'digitalprint', 'designservice'
         selected
       else
         unselected
       end
     end
-
-
   end
 
   before do
