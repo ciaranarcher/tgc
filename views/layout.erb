@@ -1,10 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-  <head></head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>The Graphics Company</title>
+    <link REL="stylesheet" TYPE="text/css" HREF="/css/tgc.css" />
+    <meta name="description" content="Commerical and corporate wide-format and standard print and display solutions." />
+    <meta name="keywords" content="wide-format printing,digital print,banners,posters,popups,vinyl prints,flyers,brochures,exhibitions,window graphics,signage." />
+  </head>
   <body>
-    <div>Header</div>
-
-    <%= yield %>
     
-    <div>Footer</div>
+    <div id="outerWrapper">
+      
+      <div id="header">
+        <div id="companyName">
+          <a href="index.php">THE <br/>
+          GRAPHICS COMPANY</a>
+        </div>
+      </div>
+      
+      <div id="topNav">
+        <div><a <?php if ($thisSection == "about")   {?> class="topNavLinkSelected" <?php } else { ?> class="topNavLink" <?php } ?> href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=about">ABOUT US</a></div>
+        <div><a <?php if ($thisSection == "contact")   {?> class="topNavLinkSelected" <?php } else { ?> class="topNavLink" <?php } ?> href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=contact">CONTACT US</a></div>
+        <div><a <?php if ($thisSection == "advUpload")   {?> class="topNavLinkSelected" <?php } else { ?> class="topNavLink" <?php } ?> href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=advUpload">CLIENT FTP</a></div>
+        <div><a <?php if ($thisSection == "quote")   {?> class="topNavLinkSelected" <?php } else { ?> class="topNavLink" <?php } ?> href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=quote">QUICK QUOTE</a></div>
+        <div id="fblogo">
+          <a href="http://facebook.com/graphicscompany"><img src="/imgs/f_logo.png" title="Find us on Facebook" /></a>
+        </div>
+      </div>
+      
+    
+      
+
+      <div id="nav">
+        
+        <div><a <?php if ($thisSection == "home")   {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=home">HOME</a></div>
+        <div><a <?php if ($thisSection == "pointofsale")   {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=pointofsale">POINT OF SALE</a></div>
+        <div><a <?php if ($thisSection == "posters") {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=posters">POSTERS</a></div>
+        <div><a <?php if ($thisSection == "displaypanels") {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=displaypanels">DISPLAY PANELS</a></div>
+        <div><a <?php if ($thisSection == "windowgraphics") {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=windowgraphics">WINDOW GRAPHICS</a></div>
+        <div><a <?php if ($thisSection == "bannersflags") {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/">BANNERS / FLAGS</a></div>
+        <div><a <?php if ($thisSection == "exhibitions") {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/">EXHIBITIONS &amp; SETS</a></div>
+        <div><a <?php if ($thisSection == "digitalprint") {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/">DIGITAL PRINT</a></div>
+        <div><a <?php if ($thisSection == "designservice") {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/">DESIGN SERVICE</a></div>
+      </div>
+      
+      <div id="content"><%= yield %></div>
+
+      
+      <div id="footer">
+        :: info@thegraphicscompany.ie :: +353 (1) 840 1311 :: Unit 12 : Redleaf Business Park : Donabate : Co. Dublin : Ireland :: 
+      </div>
+      
+    </div>
+    
+    
   </body>
 </html>
