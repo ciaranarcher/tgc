@@ -1,0 +1,212 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: 0px;
+}
+#outerWrapper {
+	background-color: #000000;
+	color: #ffffff;
+	width: 900px;
+	height: 700px;
+	padding: 0px;
+	text-align:left;
+}
+#header {
+	width: 900px;
+	height: 143px;
+	background-image: url('/content/imgs/header.png');
+	background-repeat: no-repeat;
+	background-position: right;
+	padding: 0px;
+	margin: 0px;
+}
+
+#companyName {
+	font-family:"Times New Roman";
+	font-size: 40px;
+	margin-left: 20px;
+	padding-top: 25px;
+	line-height: 35px;
+}
+
+#companyName a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.topNavLink {
+	text-decoration: none;
+	color: #CC3300;
+	font-size: 16px;
+	font-family: "Arial";
+	font-weight: bold;
+}
+
+.topNavLinkSelected {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 16px;
+	font-family: "Arial";
+	font-weight: bold;
+}
+
+#topNav {
+	margin-left:300px;
+}
+
+#topNav div {
+	float:left;
+	width: 130px;
+}
+
+
+#content {
+	
+	float:left;
+	background-color: #ffffff;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	margin: 10px 5px 5px 5px;
+	padding: 5px;
+	width: 650px;
+	height: 400px;
+	overflow: scroll;
+}
+
+#nav {
+	clear: both;
+	float: left;
+	margin: 10px;
+	width: 200px;
+}
+
+#nav div {
+	background-image: url('/content/imgs/square.png');
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 30px;
+}
+
+.selectedLink {
+	text-decoration: none;
+	color: #CC3300;
+	font-size: 16px;
+	font-family: "Arial";
+	font-weight: bold;
+	line-height: 30px;
+}
+
+.navLink {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 16px;
+	font-family: "Arial";
+	font-weight: bold;
+	line-height: 30px;
+}
+
+
+
+#footer {
+	clear: both;
+	margin: 40px 20px 20px 90px;
+	left: 90px;
+	font-weight: bold;
+	color: #CC3300;
+	
+}
+
+
+/* styles beyond here are for page content */
+
+.lists {
+	float: left;
+	margin-bottom: 10px;
+}
+
+.lists ul {
+	float: left;
+	width: 250px;
+}
+
+.lists li {
+	padding:0 0 0 16px;
+	list-style-type:none;
+	background:url(/content/imgs/dot.gif) 8px 6px no-repeat;
+	font-size:14px;
+}
+
+.imageGrid {
+	clear: both;
+	width: 100%;
+}
+
+.imageGrid td {
+	border: 1px solid #efefef; 
+	width: 200px;
+	text-align: center;
+	vertical-align: top;
+}
+
+.imageGrid td .imgBox {
+	margin-top: 5px;
+}
+
+.textContentImportant {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #CC3300;
+}
+
+/*.textContent {
+	width: 450px;
+}
+
+.narrowList li {
+	width: 350px;
+}*/
+
+/* point of sale page */
+/* #pointofsale div {border: 1px solid lime;} */
+
+#pointofsale {
+	clear: both;
+}
+
+#pointofsaleContent {
+	float: left;
+}
+
+#pointofsale #images {
+	float: left;
+}
+
+#pointofsale #bottomImages {
+	clear: both;
+}
+
+/* posters page */
+#posters {
+	clear: both;
+}
+
+#postersContent {
+	float: left;
+}
+
+
+/* quick quote page styles */
+.warning {color: red; font-weight: bold;}
+.success {color: green; font-weight: bold;}
+
+/* contact us page styles */
+.label { font-weight: bold; width: 100px; }
+#contact td {vertical-align:top;}
+
+/* FB logo */
+#topNav div#fblogo {
+	width: 30px;
+	float: right;
+	margin-right: 15px;
+}

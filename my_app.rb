@@ -1,10 +1,13 @@
 # my_app.rb
 require 'sinatra/base'
+require 'sinatra/reloader'
 
-class MyApp < Sinatra::Base
+class TGC < Sinatra::Base
+  register Sinatra::Reloader if development?
+
   get '/' do
-    'Hello world!'
-  end
+    erb :home
+  end  
 
   # start the server if ruby file executed directly
   run! if app_file == $0
