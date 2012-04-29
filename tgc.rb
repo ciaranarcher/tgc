@@ -1,9 +1,33 @@
 # my_app.rb
 require 'sinatra/base'
-require 'sinatra/reloader' 
+require 'sinatra/reloader'
 
 class TGC < Sinatra::Base
   register Sinatra::Reloader if development?
+
+  helpers do
+    def top_nav_class(path)
+      selected, unselected = 'class="topNavLinkSelected"', 'class="topNavLink"'
+      case path
+      when 'about', 'contact', 'upload', 'quote'
+        selected
+      else
+        unselected
+      end
+    end
+
+    def side_nav_class(path)
+      selected, unselected = 'class="selectedLink"', 'class="navLink"'
+      case path
+      when 'about', 'contact', 'upload', 'quote'
+        selected
+      else
+        unselected
+      end
+    end
+
+
+  end
 
   before do
     @path = request.path_info.gsub('/' , '')

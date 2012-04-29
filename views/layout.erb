@@ -13,16 +13,17 @@
       
       <div id="header">
         <div id="companyName">
-          <a href="index.php">THE <br/>
+          <a href="/">THE <br/>
           GRAPHICS COMPANY</a>
         </div>
       </div>
       
       <div id="topNav">
-        <div><a <?php if ($thisSection == "about")   {?> class="topNavLinkSelected" <?php } else { ?> class="topNavLink" <?php } ?> href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=about">ABOUT US</a></div>
-        <div><a <?php if ($thisSection == "contact")   {?> class="topNavLinkSelected" <?php } else { ?> class="topNavLink" <?php } ?> href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=contact">CONTACT US</a></div>
-        <div><a <?php if ($thisSection == "advUpload")   {?> class="topNavLinkSelected" <?php } else { ?> class="topNavLink" <?php } ?> href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=advUpload">CLIENT FTP</a></div>
-        <div><a <?php if ($thisSection == "quote")   {?> class="topNavLinkSelected" <?php } else { ?> class="topNavLink" <?php } ?> href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=quote">QUICK QUOTE</a></div>
+        <div><a <%= top_nav_class(@path) %> href="/about">ABOUT US</a></div>
+        <div><a <%= top_nav_class(@path) %> href="/contact">CONTACT US</a></div>
+        <% # TODO %>
+        <% # <div><a <%= top_nav_class(@path) %> href="/upload">CLIENT FTP</a></div> %>
+        <% # <div><a <%= top_nav_class(@path) %> href="/quote">QUICK QUOTE</a></div> %>
         <div id="fblogo">
           <a href="http://facebook.com/graphicscompany"><img src="/imgs/f_logo.png" title="Find us on Facebook" /></a>
         </div>
@@ -33,15 +34,15 @@
 
       <div id="nav">
         
-        <div><a <?php if ($thisSection == "home")   {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=home">HOME</a></div>
-        <div><a <?php if ($thisSection == "pointofsale")   {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=pointofsale">POINT OF SALE</a></div>
-        <div><a <?php if ($thisSection == "posters") {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=posters">POSTERS</a></div>
-        <div><a <?php if ($thisSection == "displaypanels") {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=displaypanels">DISPLAY PANELS</a></div>
-        <div><a <?php if ($thisSection == "windowgraphics") {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/index.php?section=windowgraphics">WINDOW GRAPHICS</a></div>
-        <div><a <?php if ($thisSection == "bannersflags") {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/">BANNERS / FLAGS</a></div>
-        <div><a <?php if ($thisSection == "exhibitions") {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/">EXHIBITIONS &amp; SETS</a></div>
-        <div><a <?php if ($thisSection == "digitalprint") {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/">DIGITAL PRINT</a></div>
-        <div><a <?php if ($thisSection == "designservice") {?> class="selectedLink" <?php } else { ?> class="navLink" <?php } ?>href="http://<?php echo $_SERVER['SERVER_NAME'] ?>/">DESIGN SERVICE</a></div>
+        <div><a <%= if ($thisSection == "home")   {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/index.php?section=home">HOME</a></div>
+        <div><a <%= if ($thisSection == "pointofsale")   {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/index.php?section=pointofsale">POINT OF SALE</a></div>
+        <div><a <%= if ($thisSection == "posters") {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/index.php?section=posters">POSTERS</a></div>
+        <div><a <%= if ($thisSection == "displaypanels") {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/index.php?section=displaypanels">DISPLAY PANELS</a></div>
+        <div><a <%= if ($thisSection == "windowgraphics") {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/index.php?section=windowgraphics">WINDOW GRAPHICS</a></div>
+        <div><a <%= if ($thisSection == "bannersflags") {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/">BANNERS / FLAGS</a></div>
+        <div><a <%= if ($thisSection == "exhibitions") {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/">EXHIBITIONS &amp; SETS</a></div>
+        <div><a <%= if ($thisSection == "digitalprint") {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/">DIGITAL PRINT</a></div>
+        <div><a <%= if ($thisSection == "designservice") {%> class="selectedLink" <%= } else { %> class="navLink" <%= } %>href="http://<%= echo $_SERVER['SERVER_NAME'] %>/">DESIGN SERVICE</a></div>
       </div>
       
       <div id="content"><%= yield %></div>
