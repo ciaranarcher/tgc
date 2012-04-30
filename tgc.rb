@@ -65,6 +65,10 @@ class TGC < Sinatra::Base
     erb :displaypanels
   end
 
+  get '/windowgraphics' do
+    erb :windowgraphics
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
