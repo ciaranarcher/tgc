@@ -34,8 +34,12 @@ class TGC < Sinatra::Base
   # Filters
   ##
   before do
+    # Workout the path for use in views
     @path = request.path_info.gsub('/' , '')
     @path = @path.empty? ? 'home' : @path
+
+    # Caching of images / CSS
+    cache_control :public, :must_revalidate, :max_age => 60
   end
 
   ##
