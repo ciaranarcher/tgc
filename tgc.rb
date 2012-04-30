@@ -6,20 +6,20 @@ class TGC < Sinatra::Base
   register Sinatra::Reloader if development?
 
   helpers do
-    def top_nav_class(path)
+    def top_nav_class(path, link)
       selected, unselected = 'class="topNavLinkSelected"', 'class="topNavLink"'
-      case path
-      when 'about', 'contact', 'upload', 'quote'
+
+      if path == link
         selected
       else
         unselected
       end
     end
 
-    def side_nav_class(path)
+    def side_nav_class(path, link)
       selected, unselected = 'class="selectedLink"', 'class="navLink"'
-      case path
-      when 'home', 'pointofsale', 'posters', 'displaypanels', 'windowgraphics', 'bannersflags', 'exhibitions', 'digitalprint', 'designservice'
+      
+      if path == link
         selected
       else
         unselected
