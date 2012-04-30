@@ -34,7 +34,15 @@ class TGC < Sinatra::Base
 
   get '/' do
     erb :home
-  end  
+  end
+
+  get '/about' do
+    erb :home
+  end
+
+  get '/contact' do
+    erb :contact
+  end
 
   # start the server if ruby file executed directly
   run! if app_file == $0
