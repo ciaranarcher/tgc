@@ -1,4 +1,3 @@
-# my_app.rb
 require 'sinatra/base'
 require 'sinatra/reloader'
 
