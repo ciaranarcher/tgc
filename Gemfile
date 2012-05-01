@@ -1,3 +1,5 @@
 source 'http://rubygems.org'
-gem 'sinatra'
-gem  'sinatra-contrib'
+
+gem 'sinatra', :require => "sinatra/base"
+gem 'sinatra-contrib'
+gem 'google_drive'

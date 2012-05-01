@@ -1,6 +1,3 @@
-require 'sinatra/base'
-require 'sinatra/reloader'
-
 class TGC < Sinatra::Base
   register Sinatra::Reloader if development?
 
@@ -70,6 +67,22 @@ class TGC < Sinatra::Base
 
   get '/windowgraphics' do
     erb :windowgraphics
+  end
+
+  get '/google' do
+
+    # Logs in.
+    # You can also use OAuth. See document of
+    # GoogleDrive.login_with_oauth for details.
+    session = GoogleDrive.login('USER', 'TODO')
+
+    session.upload_from_file('/Users/carcher/Documents/Blog Posts Drafts/Moving to Mercurial.md', 'mercurial.txt', :convert => false)
+
+    # Gets list of remote files.
+    for file in session.files
+      p file.title
+    end
+    'file uploaded'
   end
 
   # start the server if ruby file executed directly
