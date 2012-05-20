@@ -1,5 +1,13 @@
+require_relative 'models/file'
+
 class TGC < Sinatra::Base
   register Sinatra::Reloader if development?
+
+  ##
+  # Config
+  ##
+  configure do
+  end
 
   ##
   # Helpers
@@ -83,6 +91,19 @@ class TGC < Sinatra::Base
       p file.title
     end
     'file uploaded'
+  end
+
+  get '/publish_file' do
+
+    f = PublishedFile.create(
+      :token => '12345',
+      :publisher_name => 'Ciaran',
+      :email => 'carcher@blarg.com',
+      :file_name => 'file.txt',
+      :created_at => Time.now
+    )
+
+    "New document has PK of #{f[:id]}"
   end
 
   # start the server if ruby file executed directly
