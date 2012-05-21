@@ -106,6 +106,12 @@ class TGC < Sinatra::Base
       "New document has PK of #{f[:id]}"
   end
 
+  get '/published_files' do
+    files = PublishedFile.all
+
+    files.to_s
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
