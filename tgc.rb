@@ -96,14 +96,14 @@ class TGC < Sinatra::Base
   get '/publish_file' do
 
     f = PublishedFile.create(
-      :token => '12345',
+      :secret_token => '12345',
       :publisher_name => 'Ciaran',
       :email => 'carcher@blarg.com',
       :file_name => 'file.txt',
       :created_at => Time.now
     )
 
-    "New document has PK of #{f[:id]}"
+      "New document has PK of #{f[:id]}"
   end
 
   # start the server if ruby file executed directly

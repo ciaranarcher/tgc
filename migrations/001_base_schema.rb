@@ -4,7 +4,7 @@ Sequel.migration do
   up do
     create_table(:files) do
       primary_key :id
-      String      :token,          :size => 500, :null => false
+      String      :secret_token,          :size => 500, :null => false
       String      :publisher_name, :size => 500, :null => false
       String      :email,          :size => 500, :null => false
       String      :file_name,      :size => 500, :null => false
